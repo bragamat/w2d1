@@ -1,15 +1,22 @@
 var https = require('https');
 
-var URL = "https://api.github.com";
+function getAndPrintHTMLChunks () {
 
-console.log("before request");
+  var requestOptions = {
+    host: 'sytantris.github.io',
+    path: '/http-examples/step1.html'
+  };
 
-https.get(URL, function(res){
- console.log("inside");
- res.on('data', function(res) {
-    console.log('[-- res OF LENGTH ' + res.length + ' --]');
-    console.log(res.toString());
+  /* Add your code here */
+  https.get(requestOptions, function(res) {
+    
+    res.setEncoding('utf8');
+    
+    res.on("data" , function(chunk) {
+      console.log(chunk);
+    
+    })
   });
-});
+}
 
-console.log("After");
+getAndPrintHTMLChunks();
