@@ -1,6 +1,6 @@
 var https = require('https');
 
-function getHTML (options, callback) {
+var myFunc = function getHTML (options, callback) {
 
     var buffer = "";
   /* Add your code here */
@@ -26,4 +26,6 @@ var requestOptions = {
   path: '/http-examples/step4.html'
 };
 
-getHTML(requestOptions, printHTML);
+myFunc(requestOptions, printHTML);
+
+module.exports = myFunc;
