@@ -15,7 +15,7 @@ function getAndPrintHTML () {
     res.on("data" , function(chunk) {
       console.log(chunk);
     buffer += chunk;
-    }) 
+    });
   }); 
 }
 
