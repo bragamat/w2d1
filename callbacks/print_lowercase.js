@@ -1,6 +1,6 @@
 var https = require('https');
 
-var getHTML = require('./4thstep.js');
+var getHTML = require('../4thstep.js');
 
 var requestOptions = {
   host: 'sytantris.github.io',
@@ -11,4 +11,4 @@ function lowerCase(html) {
   console.log(html.toLowerCase());
 }
 
-getHTML(requestOptions, lowercase);
+getHTML(requestOptions, lowerCase);
